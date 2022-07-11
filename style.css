@@ -101,6 +101,8 @@ img {
 
 .bar {
     padding-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
 }
 
@@ -176,6 +178,7 @@ img {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px)  {
@@ -185,6 +188,9 @@ img {
    
 }
 
+.button:hover {
+    cursor: pointer;
+}
 .primary--button {
     background-color: var(--negro);
 
@@ -209,15 +215,17 @@ img {
 }
 
 
-.widget-curso__label {
+.widget-course__label,
+.course__label {
     font-family: var(--fuenteheading);
     font-weight: bold;
+    
 
 }
 
 
 
-.widget-curso__info {
+.widget-course__info {
     font-weight: normal;
 
 }
@@ -240,8 +248,93 @@ img {
     .about-us__img,
     .about-us__text {
         flex-basis: 50%;
-    }
-    
-   
+    }  
    
 }
+
+.course {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+
+}
+
+@media (min-width: 768px)  {
+    .course {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+
+    }
+   
+}
+
+.course:last-of-type {
+    border: none;
+}
+
+.course__information {
+    font-weight: normal;
+}
+
+.course__label,
+.course__information {
+    font-size: 1.5rem;
+}
+
+.description__course {
+    font-size: 1.3rem;
+}
+
+/** contacto **/
+
+@media (min-width: 468px)  {
+    .form {
+        background-color: var(--blanco);
+        margin: -5rem auto 0 auto;
+        width: 90%;
+        padding: 5rem;
+
+   
+}
+
+.contact-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.form {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 90%;
+    padding: 5rem;
+
+}
+
+.field {
+    display: flex;
+    margin-bottom: 2rem;
+
+    
+}
+
+.field__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+
+}
+
+.field__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+    
+}
+
+.field__field--textarea {
+    height: 20rem;
+
+}
+
