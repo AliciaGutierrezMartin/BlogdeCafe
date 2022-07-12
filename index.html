@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogdeCafé </title>
+    <meta name="description" content="Página web de blog de café">
+
+    <!--prefetch-->
+    <link rel="prefetch" href="nosotros.html" as="document">
    
 
     <!--preload-->
@@ -18,8 +22,6 @@
     
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preload" href="img/blog1.jpg" as="image">
 </head>
 <body>
 
@@ -52,8 +54,11 @@
             <h3>Nuestro Blog</h3>
             <article class="entry">
                 <div class="img__entry">
-                    <img loading="lazy" src="img/blog1.jpg" alt="imagen del blog">
-                </div>
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen del blog">
+                    </picture>
+                   
                 <div class="container__entry">
                     <h4 class="no-margin">Tipos de Grano de Café</h4>
                     <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum".</p>
@@ -63,7 +68,10 @@
 
             <article class="entry">
                 <div class="img__entry">
-                    <img  loading="lazy" src="img/blog2.jpg" alt="imagen del blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen del blog">
+                    </picture>
                 </div>
                 <div class="container__entry">
                     <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
@@ -74,7 +82,10 @@
 
             <article class="entry">
                 <div class="img__entry">
-                    <img loading="lazy" src="img/blog3.jpg" alt="imagen del blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen del blog">
+                    </picture>
                 </div>
                 <div class="container__entry">
                     <h4 class="no-margin">Beneficios del Café</h4>
@@ -122,6 +133,8 @@
             </nav>     
         </div>
     </footer>
+
+    <script src="js/modernizr.js"></script>
     
 </body>
 </html>
